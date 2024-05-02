@@ -1,42 +1,46 @@
-import java.util.Scanner;
+import modelo.Pelicula;
+import modelo.Serie;
 
 public class Main {
     public static void main(String[] args) {
-        //System.out.println("MATRIX");
-        int fechaDeLanzamiento = 1999;
-        double evaluacion = 4.5;
-        boolean incluidoEnElPlanBasico = true;
-        String nombre= "Matrix";
-        String sinopsis = """
-                La mejor pelicula relacionado a la tecnología
-                """;
 
-        double mediaEvaluacionUsuario = 0;
-        //System.out.println("La fecha de lanzaminto de la peli es " + fechaDeLanzamiento + "su evaluación es de " + evaluacion + " Tiene plan basico " + incluidoEnElPlanBasico);
-        System.out.println("Pelicula: " + nombre);
-        System.out.println(" sinopsis: " + sinopsis);
-        System.out.println(" Fecha Lanzamiento: " + fechaDeLanzamiento);
-        System.out.println(" Evalucacion: " + evaluacion);
-        System.out.println(" Contiene plan de subscripcion: " +  incluidoEnElPlanBasico);
+        Principal principal = new Principal();
+        principal.muestraMenu();
+
+       /* Pelicula pelicula = new Pelicula();
+        pelicula.setNombre("Avengers");
+        pelicula.setSinopsis("""
+                Super heroes reunidos para pelear contra el mal
+                y defender a la tierra.
+                """);
+        pelicula.setDuracion(150);
+        pelicula.setFechaLanzamiento(2012);
+
+        pelicula.mostrarFichaTecnica();
 
 
-        double mediaEvaluacion = (4.5 + 4.8 + 3) / 3;
-        System.out.println("Media de la evalucion es: " + mediaEvaluacion);
 
-        if (fechaDeLanzamiento >= 2024){
-            System.out.println("la pelicula es reciente");
-        } else{
-            System.out.println("la pelicula no es reciente");
-        }
+        Pelicula  otraPelicula = new Pelicula();
+        otraPelicula.setNombre("Avengers End Game");
+        otraPelicula.setSinopsis("""
+                Super heroes reunidos para pelear contra el mal
+                y defender a la tierra contra Thanos.
+                """);
+        otraPelicula.setDuracion(150);
+        otraPelicula.setFechaLanzamiento(2019);
 
-        for (int i = 0; i < 3; i++) {
-            Scanner teclado = new Scanner(System.in);
-            System.out.println("Ingrese la nota que le da a la pelicula matrix");
-            double nota = teclado.nextDouble();
-             mediaEvaluacionUsuario = mediaEvaluacionUsuario + nota;
 
-        }
-        System.out.println("La media de la pelicula matrix calculada es: " + mediaEvaluacionUsuario / 3);
+        otraPelicula.mostrarFichaTecnica();
+
+
+        Serie nuevaSerie = new Serie();
+        nuevaSerie.setNombre("Friends");
+        nuevaSerie.setFechaLanzamiento(2012);
+        nuevaSerie.setTemporadas(10);
+        nuevaSerie.setEpisodiosPorTemporadas(22);
+        nuevaSerie.setDuracionPorEpisodio(30);
+
+        nuevaSerie.mostrarFichaTecnica();*/
 
     }
 }
